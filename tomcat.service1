@@ -1,0 +1,12 @@
+[Unit]
+Description=Tomcat Web Application Container
+
+[Service]
+RemainAfterExit=yes
+Type=oneshot
+
+ExecStart=/opt/tomcat/bin/startup.sh
+ExecStop=/opt/tomcat/bin/shutdown.sh
+
+[Install]
+WantedBy=multi-user.target
